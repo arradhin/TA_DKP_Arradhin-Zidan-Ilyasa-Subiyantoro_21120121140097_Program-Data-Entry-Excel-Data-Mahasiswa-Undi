@@ -5,7 +5,7 @@ import pandas as pd # untuk menyambungkan python ke excel
 sg.theme ('GrayGrayGray')
 
 # variabel untuk mengakses file excel 
-Excel_path = "C:\\Users\\Arradhin\\Documents\\Data_Entry.xlsx" # modul 1
+Excel_path = "C:\\Users\\Arradhin\\Documents\\Data_Entry.xlsx"
 df = pd.read_excel(Excel_path) #dataframe
 
 class MyClass:
@@ -31,15 +31,15 @@ layout = [
 window = sg.Window("Data Entry", layout)
 
 # clear form
-def clear_input(): #method #modul 4
+def clear_input(): #method
     for key in values:
         window[key]('')
     return None
 
-#loop # modul 3
+#loop
 while True:
     event, values = window.read()
-    if event == sg.WIN_CLOSED or event == "Exit": # menutup aplikasi jika mengklik tombol X atau tombol exit # modul 2
+    if event == sg.WIN_CLOSED or event == "Exit": # menutup aplikasi jika mengklik tombol X atau tombol exit
         break 
     if event == "Clear":
         clear_input()
